@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header th:fragment="header" class="header">
+    <div class="container-lg">
+        <div
+                class="d-flex d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3"
+        >
+            <a href="/" class="logo">
+                <img src="./assets/logo.svg" alt="logo"/>
+            </a>
+            <div class="header__search">
+                <div class="dropdown search-select">
+                    <a
+                            class="dropdown-toggle"
+                            href="#"
+                            id="navbarDarkDropdownMenuLink"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        Unilibrary
+                    </a>
+                    <ul
+                            class="dropdown-menu dropdown-menu mt-3"
+                            aria-labelledby="navbarDarkDropdownMenuLink"
+                    >
+                        <li><a class="dropdown-item" href="#"> Unilibrary</a></li>
+                        <li><a class="dropdown-item" href="#">Scopus</a></li>
+                    </ul>
+                </div>
+                <input
+                        class="form-control search-input"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                />
+                <div class="header-search__search">
+                    <img src="./assets/search-icon.svg" alt="search-icon"/>
+                </div>
+            </div>
+            <div class="col-md-2 text-end">
+                <button type="button" class="btn me-2 btn-login">O'zbekcha</button>
+                <a  class="btn btn-primary" th:href="@{/auth/go/login}">Kirish</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- NAVBAR -->
+<nav th:fragment="navbar" class="navbar mb-4">
+    <div class="container-lg">
+        <ul class="d-flex justify-content-between flex-wrap w-100 fs-5 p-0">
+            <li>
+                <a th:href="@{/literature}">Adabiyotlar</a>
+            </li>
+            <li>
+                <a href="">MaqolalarJon</a>
+            </li>
+            <li>
+                <a href="">Dissertatsiyalar</a>
+            </li>
+            <li>
+                <a href="">Monografiyalar</a>
+            </li>
+            <li>
+                <a href="">Muassasalar</a>
+            </li>
+            <li>
+                <a href="./authors.html">Mualliflar</a>
+            </li>
+            <li>
+                <a href="">Jurnallar</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+</body>
+</html>

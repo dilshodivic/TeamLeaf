@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+          rel="stylesheet"/>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" type="text/css" th:href="@{/owl_carousel/owl.carousel.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/owl_carousel/owl.theme.default.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/style/main.css}"/>
+    <title>Adabiyotlar</title>
+</head>
+<body>
+<!-- HEADER -->
+<div th:insert="fragments/header::header"></div>
+<!-- END HEADER -->
+<!-- NAVBAR -->
+<div th:insert="fragments/header::navbar"></div>
+<!-- END NAVBAR -->
+
+
+<!-- TABLE CONTENT -->
+<section>
+    <div class="section-search">
+        <div class="container-lg">
+            <div class="search-wrapper p-3 border">
+                <div class="row between-md">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-0">
+                        <label class="search-filed" for="name">
+                            <div class="search-filed__title">Maqola nomi</div>
+                            <div class="search-filed__input">
+                                <input
+                                        id="name"
+                                        name="name"
+                                        placeholder="Maqola nomini kiriting"
+                                        type="text"
+                                        autocomplete="off"
+                                        autocapitalize="off"
+                                        autocorrect="off"
+                                        value=""
+                                /></div
+                            >
+                        </label>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-0">
+                        <label class="search-filed" for="name">
+                            <div class="search-filed__title">Muallif ismi sharifi</div>
+                            <div class="search-filed__input">
+                                <input
+                                        id="name"
+                                        name="name"
+                                        placeholder="Muallif ismini kiriting"
+                                        type="text"
+                                        autocomplete="off"
+                                        autocapitalize="off"
+                                        autocorrect="off"
+                                        value=""
+                                /></div
+                            >
+                        </label>
+                    </div>
+                    <div
+                            class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-0 search-advanced"
+                    >
+                        <label class="search-filed" for="name">
+                            <div class="search-filed__title">Muallif ismi sharifi</div>
+                            <div class="search-filed__input">
+                                <input
+                                        id="name"
+                                        name="name"
+                                        placeholder="Muallif ismini kiriting"
+                                        type="text"
+                                        autocomplete="off"
+                                        autocapitalize="off"
+                                        autocorrect="off"
+                                        value=""
+                                /></div
+                            >
+                        </label>
+                    </div>
+                    <div
+                            class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-0 search-advanced"
+                    >
+                        <label class="search-filed" for="name">
+                            <div class="search-filed__title">Resurs turi</div>
+                            <select
+                                    class="form-select"
+                                    aria-label="Default select example"
+                            >
+                                <option selected>Resurs turi</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div
+                            class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-0 search-advanced"
+                    >
+                        <label class="search-filed" for="name">
+                            <div class="search-filed__title">Davlat nomi</div>
+                            <select
+                                    class="form-select"
+                                    aria-label="Default select example"
+                            >
+                                <option selected>Davlat nomi</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-0">
+                        <div class="search-btns">
+                            <div class="col-xs-6">
+                                <button type="button" class="btn btn-dark">Qidiruv</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button
+                                        type="button"
+                                        class="btn btn-secondary button-lg filter"
+                                >
+                                    Filtr
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-lg">
+        <div class="custom-table py-5">
+            <div class="custom-table-head gap-4">
+                <div class="custom-table__col">
+                    <span class="custom-table__col-num">№</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>Maqola</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> Resurs turi</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> Yil</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> Davlat</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> Tili</span>
+                </div>
+            </div>
+            <div class="custom-table__row gap-4">
+                <div class="custom-table__col">
+                    <span class="custom-table__col-num">1</span>
+                </div>
+                <div class="custom-table__col">
+                    <a class="custom-table__col-name"
+                    >Фузариозные корневые гнили пщеницы в мире и в Узбекистане</a
+                    >
+                    <div class="t-authors">
+                        <span>Mualliflar: </span>
+                        <span>Jamoa </span>
+                    </div>
+                    <div class="t-source">
+                        <span>Jurnal: </span>
+                        <span
+                        >Аграр фан назарияси ва амалиётидаги долзарб муаммолар ва
+                  уларнинг ечимлари</span
+                        >
+                    </div>
+                </div>
+                <div class="custom-table__col">
+                    <span>Ilmiy maqola</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> 2020</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>O`zbekiston</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>Rus</span>
+                </div>
+            </div>
+            <div class="custom-table__row gap-4">
+                <div class="custom-table__col">
+                    <span class="custom-table__col-num">2</span>
+                </div>
+                <div class="custom-table__col">
+                    <a class="custom-table__col-name"
+                    >Фузариозные корневые гнили пщеницы в мире и в Узбекистане</a
+                    >
+                    <div class="t-authors">
+                        <span>Mualliflar: </span>
+                        <span>Jamoa </span>
+                    </div>
+                    <div class="t-source">
+                        <span>Jurnal: </span>
+                        <span
+                        >Аграр фан назарияси ва амалиётидаги долзарб муаммолар ва
+                  уларнинг ечимлари</span
+                        >
+                    </div>
+                </div>
+                <div class="custom-table__col">
+                    <span>Ilmiy maqola</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> 2020</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>O`zbekiston</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>Rus</span>
+                </div>
+            </div>
+            <div class="custom-table__row gap-4">
+                <div class="custom-table__col">
+                    <span class="custom-table__col-num">3</span>
+                </div>
+                <div class="custom-table__col">
+                    <a class="custom-table__col-name"
+                    >Фузариозные корневые гнили пщеницы в мире и в Узбекистане</a
+                    >
+                    <div class="t-authors">
+                        <span>Mualliflar: </span>
+                        <span>Jamoa </span>
+                    </div>
+                    <div class="t-source">
+                        <span>Jurnal: </span>
+                        <span
+                        >Аграр фан назарияси ва амалиётидаги долзарб муаммолар ва
+                  уларнинг ечимлари</span
+                        >
+                    </div>
+                </div>
+                <div class="custom-table__col">
+                    <span>Ilmiy maqola</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> 2020</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>O`zbekiston</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>Rus</span>
+                </div>
+            </div>
+            <div class="custom-table__row gap-4">
+                <div class="custom-table__col">
+                    <span class="custom-table__col-num">4</span>
+                </div>
+                <div class="custom-table__col">
+                    <a class="custom-table__col-name"
+                    >Фузариозные корневые гнили пщеницы в мире и в Узбекистане</a
+                    >
+                    <div class="t-authors">
+                        <span>Mualliflar: </span>
+                        <span>Jamoa </span>
+                    </div>
+                    <div class="t-source">
+                        <span>Jurnal: </span>
+                        <span
+                        >Аграр фан назарияси ва амалиётидаги долзарб муаммолар ва
+                  уларнинг ечимлари</span
+                        >
+                    </div>
+                </div>
+                <div class="custom-table__col">
+                    <span>Ilmiy maqola</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> 2020</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>O`zbekiston</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>Rus</span>
+                </div>
+            </div>
+            <div class="custom-table__row gap-4">
+                <div class="custom-table__col">
+                    <span class="custom-table__col-num">1</span>
+                </div>
+                <div class="custom-table__col">
+                    <a class="custom-table__col-name"
+                    >Фузариозные корневые гнили пщеницы в мире и в Узбекистане</a
+                    >
+                    <div class="t-authors">
+                        <span>Mualliflar: </span>
+                        <span>Jamoa </span>
+                    </div>
+                    <div class="t-source">
+                        <span>Jurnal: </span>
+                        <span
+                        >Аграр фан назарияси ва амалиётидаги долзарб муаммолар ва
+                  уларнинг ечимлари</span
+                        >
+                    </div>
+                </div>
+                <div class="custom-table__col">
+                    <span>Ilmiy maqola</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> 2020</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>O`zbekiston</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>Rus</span>
+                </div>
+            </div>
+            <div class="custom-table__row gap-4">
+                <div class="custom-table__col">
+                    <span class="custom-table__col-num">5</span>
+                </div>
+                <div class="custom-table__col">
+                    <a class="custom-table__col-name"
+                    >Фузариозные корневые гнили пщеницы в мире и в Узбекистане</a
+                    >
+                    <div class="t-authors">
+                        <span>Mualliflar: </span>
+                        <span>Jamoa </span>
+                    </div>
+                    <div class="t-source">
+                        <span>Jurnal: </span>
+                        <span
+                        >Аграр фан назарияси ва амалиётидаги долзарб муаммолар ва
+                  уларнинг ечимлари</span
+                        >
+                    </div>
+                </div>
+                <div class="custom-table__col">
+                    <span>Ilmiy maqola</span>
+                </div>
+                <div class="custom-table__col">
+                    <span> 2020</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>O`zbekiston</span>
+                </div>
+                <div class="custom-table__col">
+                    <span>Rus</span>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination align-items-center justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- END TABLE CONTENT -->
+
+<!-- FOOTER -->
+<div th:insert="fragments/footer::footer"></div>
+<!-- END FOOTER -->
+
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery-3.7.0.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.js}"></script>
+</body>
+</html>
